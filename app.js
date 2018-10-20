@@ -11,7 +11,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true)
-mongoose.connect('mongodb://localhost/dashboard', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/dashboard', { useNewUrlParser: true })
 var db = mongoose.connection;
 var app = express();
 
