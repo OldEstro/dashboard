@@ -10,7 +10,8 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/dashboard'), { useNewUrlParser: true } ;
+mongoose.set('useCreateIndex', true)
+mongoose.connect('mongodb://localhost/dashboard', { useNewUrlParser: true })
 var db = mongoose.connection;
 var app = express();
 
